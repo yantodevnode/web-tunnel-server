@@ -89,7 +89,7 @@
        <div class="col-md-8">
          <div class="row gy-4 mt-2">
            <div class="pb-1 border-bottom">
-            <h1 itemprop="headline">√ ${title}</h1>
+            <div itemprop="headline" class="h1">√ ${title}</div>
             <meta itemprop="dateCreated" content='${time-iso}'>
             <meta itemprop="dateModified" content='${time-iso}'>
             <meta itemprop="thumbnailUrl" content='${image}'>
@@ -112,14 +112,18 @@
                      <meta content='5' itemprop='bestRating'/>
                      <span id="rating-icon-svg"></span>
                    </span>
-                   <meta itemprop='ratingValue' content='4.9'/>(<span itemprop='reviewCount'>8799</span>)
+                   <meta itemprop='ratingValue' content='4.9'/>(<span itemprop='reviewCount'>${count-rating}</span>)
                  </span>
                </span>
              </p>
            </div>
            <meta itemprop="abstract" content='${description}'/>
            <article class="blog-post" itemprop="articleBody">
-             ${quest}
+             <div class="block-quest">
+               <p class='h4 area-answer'>SOAL :</p>
+               <div>${quest}</div>
+             </div>
+             <div class="block-answer">${answer}</div>
            </article>
          </div>
        </div>
