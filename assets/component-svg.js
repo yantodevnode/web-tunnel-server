@@ -42,7 +42,6 @@ const compoSvg = [
 ];
 
 for(let comp of compoSvg){
-  console.log(comp)
   try{
     document.getElementById(comp.id).outerHTML=comp.value;  
   }catch(e){};

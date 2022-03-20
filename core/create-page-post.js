@@ -1,12 +1,13 @@
 const fs = require("fs");
 const dir = process.cwd();
 const config = require(dir+"/config.json");
+const crypto = require(dir+"/core/crypto");
 
 module.exports = async (data,url,fileName,id)=>{
   const pathname = url.pathname;
   const lang = config.lang;
   const author = config.author;
-  const title = data.title;
+  const title = data.title.replace(/(?:\r\n|\r|\n)/g, '');
   const countRating = title.length;
   const description = data.description;
   const quest = data.quest;
@@ -23,13 +24,15 @@ module.exports = async (data,url,fileName,id)=>{
   const origin = url.origin;
   const href = url.href;
   const query = url.query;
-  //console.log(url,data);
+  const encImage = await crypto.enc(title,"");
+  const image =  origin+config["path-image"]+encImage+".jpeg";
   let dom = await fs.readFileSync(dir+"/template/post.html","utf-8");
   
   dom = await dom.replace(/\$\{lang\}/g,lang)
   .replace(/\$\{author\}/g,author)
   .replace(/\$\{title\}/g,title)
   .replace(/\$\{description\}/g,description)
+  .replace(/\$\{image\}/g,image)
   .replace(/\$\{quest\}/g,quest)
   .replace(/\$\{answer\}/g,answer)
   .replace(/\$\{count-rating\}/g,countRating)

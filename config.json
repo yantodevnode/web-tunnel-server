@@ -6,5 +6,6 @@
   "path-sitemap-urlset":"/sitemap-",
   "path-content-post-start":"/post-",
   "path-content-post-end":"-soal-",
+  "path-image":"/image/",
   "time-waitting-response-client":10000
 }
