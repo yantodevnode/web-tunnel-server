@@ -3,5 +3,7 @@
   "author":"admin",
   "path-sitemap-index":"/sitemap.xml",
   "path-sitemap-urlset":"/sitemap-",
+  "path-content-post-start":"/post-",
+  "path-content-post-end":"-soal-",
   "time-waitting-response-client":10000
 }
