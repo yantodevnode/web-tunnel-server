@@ -15,7 +15,7 @@ module.exports = async (ws,data)=>{
           sendBack.db=String(err);
           resolve(sendBack);
         }else{
-          if(response.status && response.data && response.message){
+          if(response.status && response.data){
             sendBack.code=200;
             sendBack.status=true;
             sendBack.db=response;

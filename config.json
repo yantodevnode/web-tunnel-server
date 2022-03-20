@@ -1,6 +1,7 @@
 {
   "port":80,
   "author":"admin",
-  "path-sitemap":"/sitemap.xml",
+  "path-sitemap-index":"/sitemap.xml",
+  "path-sitemap-urlset":"/sitemap-",
   "time-waitting-response-client":10000
 }
