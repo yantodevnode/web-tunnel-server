@@ -1,6 +1,7 @@
 {
   "port":80,
-  "author":"admin",
+  "author":"Tanya Jawab",
+  "lang":"id",
   "path-sitemap-index":"/sitemap.xml",
   "path-sitemap-urlset":"/sitemap-",
   "path-content-post-start":"/post-",

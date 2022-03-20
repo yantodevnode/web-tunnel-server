@@ -1,0 +1,130 @@
+<html lang="${lang}" >
+  <head>
+    <title>√ ${title} - ${hostname}</title>
+    <meta name="description" content="${description}">
+    <link rel="canonical" href="${url}" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <!-- meta fb -->
+    <meta property="og:title" content="√ ${title} - ${hostname}">
+    <meta property="og:description" content="${description}">
+    <meta property="og:url" content="${url}">
+    <meta property="og:image" content="${image}">
+    <meta property="article:published_time" content="${time-iso}">
+    <meta property="article:modified_time" content="${time-iso}">
+    <!-- Twitter Meta Tag-->
+    <meta content='summary_large_image' name='twitter:card'>
+    <meta content='√ ${title} - ${hostname}' name='twitter:title'>
+    <meta content='${description}' name='twitter:description'>
+    <meta content='${image}' name='twitter:twitter:image'>
+    <meta content='√ ${title} - ${hostname}' name='twitter:image:alt'>
+    <!-- meta header -->
+    <meta content='#1877f2' name='msapplication-navbutton-color'>
+    <meta content='#1877f2' name='apple-mobile-web-app-status-bar-style'>
+    <meta content='#1877f2' name='theme-color'>
+    <meta content='IE=Edge' http-equiv='X-UA-Compatible'>
+    <meta content='true' name='MSSmartTagsPreventParsing'>
+    <!-- meta seo -->
+    <meta name="robots" content="index, follow, all" >
+    <meta content='index, follow' name='googlebot'>
+    <meta content='follow, all' name='Googlebot-Image'>
+    <meta name="bingbot" content="index, follow" >
+    <meta content='all' name='MSNBot'>
+    <meta content='all' name='MSNBot-Media'>
+    <!-- css -->
+    <link href="${origin}/bootstrap.min.css" rel="stylesheet"/>
+    <link href="${origin}/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet"/>
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
+  </head>
+  <body class="container-sm mt-1 d-flex flex-column h-100">
+    <header class="row mb-1" itemscope itemtype="https://schema.org/WebSite">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a itemprop="url" class="navbar-brand mb-0 h1 text-white" href="${origin}">
+              <div class="h1 firstTitle" itemprop="name">${author}</div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="${origin}">
+                <span id="nav-home-icon-svg"></span> HOME</a>
+              </li>
+              <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="#about">
+                <span id="nav-about-icon-svg"></span> About</a>
+              </li>
+              <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="#contact">
+                <span id="nav-contact-icon-svg"></span> Contact</a>
+              </li>
+              <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="#disclaimer">
+                <span id="nav-disclaimer-icon-svg"></span> Disclaimer</a>
+              </li>
+              <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="#privacy-policy">
+                <span id="nav-privacy-icon-svg"></span> Privacy</a>
+              </li>
+            </ul>
+            <div itemscope itemprop="potentialAction" itemtype="https://schema.org/SearchAction">
+               <meta itemprop="name" content="Kotak Pencarian Artikel"/>
+               <form class="d-flex" method="GET" action="${origin}/search">
+                  <meta itemprop="target" content="${origin}/search?q={q}"/>
+                  <input itemprop="query-input" class="form-control me-2" type="text" autocomplete="off" name="q" required="" spellcheck="false" placeholder="Cari Artikel..." value="" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">
+                     <span id="btn-search-icon-svg"></span>
+                  </button>
+               </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div onclick="window.scrollTo({top: 0});" class="backTop" title="scrool ke atas">
+        <span id="scrool-icon-svg"></span>
+     </div>
+    </header>
+    <main class="flex-shrink-0 mb-2" itemscope itemtype="https://schema.org/Article">
+      <!-- ads top article -->
+     <div class="row">
+       <div class="col-md-8">
+         <div class="row gy-4 mt-2">
+           <div class="pb-1 border-bottom">
+            <h1 itemprop="headline">√ ${title}</h1>
+            <meta itemprop="dateCreated" content='${time-iso}'>
+            <meta itemprop="dateModified" content='${time-iso}'>
+            <meta itemprop="thumbnailUrl" content='${image}'>
+            <meta itemprop="image" content='${image}'>
+            <p class="blog-post-meta">
+              <span id="time-icon-svg"></span> Sabtu, 13 Agustus 2021 
+              <meta itemprop="datePublished" content='${time-iso}'>
+              <span id="people-icon-svg"></span>
+              <span itemscope itemprop="author" itemtype="https://schema.org/CreativeWork">
+                  <a href="${origin}/contact" itemprop="url">
+                    <span itemprop="name">${author}</span>
+                  </a>
+              </span>
+            </p>
+             <p class="mt-1">
+               <span itemscope='' itemtype='https://schema.org/CreativeWorkSeries'>
+                 <meta content='√ ${title}' itemprop='name'/>
+                 <span itemprop='aggregateRating' itemscope='' itemtype='https://schema.org/AggregateRating'>
+                   <span id="rating">
+                     <meta content='5' itemprop='bestRating'/>
+                     <span id="rating-icon-svg"></span>
+                   </span>
+                   <meta itemprop='ratingValue' content='4.9'/>(<span itemprop='reviewCount'>8799</span>)
+                 </span>
+               </span>
+             </p>
+           </div>
+           <meta itemprop="abstract" content='${description}'/>
+           <article class="blog-post" itemprop="articleBody">
+             ${quest}
+           </article>
+         </div>
+       </div>
+     </div>
+    </main>
+    <script src="${origin}/component-svg.js"></script>
+  </body>
+</html>
