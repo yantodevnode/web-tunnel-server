@@ -1,7 +1,6 @@
 const fs = require("fs");
 const dir = process.cwd();
 const config = require(dir+"/config.json");
-const crypto = require(dir+"/core/crypto");
 
 module.exports = async (data,url,fileName,id)=>{
   const pathname = url.pathname;
@@ -24,7 +23,7 @@ module.exports = async (data,url,fileName,id)=>{
   const origin = url.origin;
   const href = url.href;
   const query = url.query;
-  const encImage = await crypto.enc(title,"");
+  const encImage = await btoa(encodeURIComponent(title[0]));
   const image =  origin+config["path-image"]+encImage+".jpeg";
   let dom = await fs.readFileSync(dir+"/template/post.html","utf-8");
   
