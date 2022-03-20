@@ -213,6 +213,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 
 .sg-text--break-words {
     word-break: break-word;
+    margin-bottom: 5px;
 }
 
 .sg-text--bold {
