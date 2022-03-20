@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yantodevnode/web-tunnel-server#readme",
   "dependencies": {
-    "socket.io": "^4.4.1"
+    "socket.io": "^4.4.1",
+    "url-parse": "^1.5.10"
   }
 }
