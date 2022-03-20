@@ -4,7 +4,7 @@ const send504 = require(dir+"/core/send-504");
 
 module.exports = async (req,res,ws,status,url)=>{
   const data = await dbSocket(ws,{
-    "get":"sitemapindexh"
+    "get":"sitemapindex"
   });
   if(data.status){
     console.log(data.db);
