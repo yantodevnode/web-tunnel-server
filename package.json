@@ -1,0 +1,23 @@
+{
+  "name": "web-tunnel-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yantodevnode/web-tunnel-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yantodevnode/web-tunnel-server/issues"
+  },
+  "homepage": "https://github.com/yantodevnode/web-tunnel-server#readme",
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  }
+}
