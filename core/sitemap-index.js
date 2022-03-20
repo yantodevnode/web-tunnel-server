@@ -1,7 +1,9 @@
+const {gzip} = require("node-gzip");
 const dir = process.cwd();
 const dbSocket = require(dir+"/core/db-socket");
 const send504 = require(dir+"/core/send-504");
 const send404 = require(dir+"/core/send-404");
+const createPageSitemapIndex = require(dir+"/core/create-page-sitemap-index");
 
 module.exports = async (req,res,ws,status,url)=>{
   const data = await dbSocket(ws,{
@@ -10,7 +12,13 @@ module.exports = async (req,res,ws,status,url)=>{
   if(data.status){
     if(typeof data.db=="object"){
       if(data.db.data && typeof data.db.data=="object"){
-        res.write(JSON.stringify(data.db.data));
+        let dom = await createPageSitemapIndex(data.db.data,url);
+        dom = await gzip(dom);
+        res.writeHead(200,{
+          "content-type":"text/xml; charset=UTF-8",
+          "content-encoding":"gzip"
+        });
+        res.write(dom);
         return res.end();
       }else{
         await send404(res);

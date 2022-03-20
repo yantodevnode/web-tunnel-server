@@ -11,7 +11,8 @@ const config = require(dir+"/config.json");
 let connectToClient=false;
 let ws=null;
 const server = http.createServer(async (req,res)=>{
-  const url = parseUrl(req.url);
+  const uriHost = req.headers["x-forwarded-proto"]+"://"+req.headers.host;
+  const url = parseUrl(uriHost+req.url);
   const pathname = url.pathname;
   const isPageAssest = await checkPageAssets(pathname);
   if(isPageAssest.status){
