@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "assets/robots.txt": [
+      {
+        "id": "21d8fab8-d7b7-4ed7-9050-d059ed9d43e2",
+        "line": 2,
+        "version": 1,
+        "index": 14
+      }
+    ]
+  }
 }

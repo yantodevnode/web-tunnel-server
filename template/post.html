@@ -96,11 +96,12 @@
             <meta itemprop="thumbnailUrl" content='${image}'>
             <meta itemprop="image" content='${image}'>
             <p class="blog-post-meta">
-              <span id="time-icon-svg"></span> Sabtu, 13 Agustus 2021 
+              <span id="time-icon-svg"></span>
+              <span id="time-read" data="${time-iso}"></span> 
               <meta itemprop="datePublished" content='${time-iso}'>
               <span id="people-icon-svg"></span>
               <span itemscope itemprop="author" itemtype="https://schema.org/CreativeWork">
-                  <a href="${origin}/contact" itemprop="url">
+                  <a href="#contact" itemprop="url">
                     <span itemprop="name">${author}</span>
                   </a>
               </span>
@@ -135,6 +136,8 @@
           <span class="text-muted">Design By <a href="${origin}">${author}</a>.</span>
        </div>
     </footer>
+    <script src="${origin}/moment.min.js"></script>
     <script src="${origin}/component-svg.js"></script>
+    <script src="${origin}/time.js"></script>
   </body>
 </html>

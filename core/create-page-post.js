@@ -23,8 +23,8 @@ module.exports = async (data,url,fileName,id)=>{
   const origin = url.origin;
   const href = url.href;
   const query = url.query;
-  const encImage = await btoa(encodeURIComponent(title[0]));
-  const image =  origin+config["path-image"]+encImage+".jpeg";
+  const encImage = await encodeURIComponent(title);
+  const image =  "https://cdn.statically.io/og/fontsize=80px/"+encImage+".jpeg";
   let dom = await fs.readFileSync(dir+"/template/post.html","utf-8");
   
   dom = await dom.replace(/\$\{lang\}/g,lang)

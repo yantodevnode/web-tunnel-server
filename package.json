@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "mime-types": "^2.1.35",
     "node-gzip": "^1.1.2",
     "socket.io": "^4.4.1",
-    "text-to-picture": "^1.0.0",
     "url-parse": "^1.5.10"
   }
 }

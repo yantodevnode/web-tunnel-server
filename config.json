@@ -2,10 +2,9 @@
   "port":80,
   "author":"Tanya Jawab",
   "lang":"id",
-  "path-sitemap-index":"/sitemap.xml",
+  "path-sitemap-index":"/hidden-sitemap.xml",
   "path-sitemap-urlset":"/sitemap-",
   "path-content-post-start":"/post-",
   "path-content-post-end":"-soal-",
-  "path-image":"/image/",
   "time-waitting-response-client":10000
 }

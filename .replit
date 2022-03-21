@@ -30,7 +30,7 @@ language = "nodejs"
 pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
 
   [languages.javascript.languageServer]
-  start = [ "typescript-language-server", "--stdio" ]
+  start = [ "typescript-language-server", "--stdio"]
 
 [debugger]
 support = true
